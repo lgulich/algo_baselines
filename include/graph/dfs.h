@@ -2,6 +2,7 @@
 
 #include "graph/types.h"
 
+// T~O(N+E), S~O(N)
 vector<int> dfsOrder(const AdjacencyList& graph, const int start) {
   if (graph.empty()) {
     return {};

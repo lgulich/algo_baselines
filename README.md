@@ -11,5 +11,9 @@ your own implementations.
 ### Graphs
 
 * Breadth First Search
+Allows to traverse graph in a certain order.
+T~O(N+E), S~O(N)
 
 * Depth First Search
+Allows to traverse graph in a certain order.
+T~O(N+E), S~O(N)
