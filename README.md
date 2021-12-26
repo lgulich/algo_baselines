@@ -1,4 +1,4 @@
-# Algo Baselines [![CMake](https://github.com/lgulich/algo_baselines/actions/workflows/cmake.yml/badge.svg)](https://github.com/lgulich/algo_baselines/actions/workflows/cmake.yml)
+# Algo Baselines [![CMake](https://github.com/lgulich/algo_baselines/actions/workflows/ci.yml/badge.svg)](https://github.com/lgulich/algo_baselines/actions/workflows/ci.yml)
 
 Baseline implementations for common algorithms in C++.
 

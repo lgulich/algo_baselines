@@ -1,4 +1,4 @@
-name: CMake
+name: CI
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
-      
+
