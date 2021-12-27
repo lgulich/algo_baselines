@@ -1,6 +1,8 @@
 #ifndef GRAPH_TOPOLOGICAL_SORT_H_
 #define GRAPH_TOPOLOGICAL_SORT_H_
 
+#include <algorithm>
+
 #include "graph/mutation.h"
 #include "graph/types.h"
 
