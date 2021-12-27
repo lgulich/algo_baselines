@@ -18,9 +18,10 @@ enable_testing()
 
 add_executable(all_tests
   test/graph/main.cc
-  test/graph/traversal_test.cc
   test/graph/mutation_test.cc
+  test/graph/shortest_path_test.cc
   test/graph/topological_sort_test.cc
+  test/graph/traversal_test.cc
   )
 target_link_libraries(all_tests
   gtest

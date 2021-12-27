@@ -17,7 +17,7 @@ your own implementations.
 
 * Traversal - Breadth First Search<br>
   Allows to traverse graph in a certain order.<br>
-  T\~O(N+E), S/=\~O(N)
+  T\~O(N+E), S=\~O(N)
 
 * Traversal - Depth First Search<br>
   Allows to traverse graph in a certain order.<br>
@@ -32,3 +32,7 @@ your own implementations.
   Find a order of the nodes such that all ancestors of a node come before the
   node itself.<br>
   T\~O(N+E), S\~O(N)
+* Shortest Path - Bellfast Algorithm<br>
+  T\~O(N\*E), S\~(N)<br>
+  Find the shortest path to all nodes in graph from a start node. Additionally
+  also finds nodes in negative cycles (shortest path = -inf).
