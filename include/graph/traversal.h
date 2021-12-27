@@ -1,13 +1,13 @@
 #ifndef GRAPH_TRAVERSAL_H_
 #define GRAPH_TRAVERSAL_H_
 
-#include <stack>
 #include <queue>
+#include <stack>
 
 #include "graph/types.h"
 
 // T~O(N+E), S~O(N)
-inline vector<int> bfsTraversal(const AdjacencyList& graph, const int start) {
+inline vector<int> bfsTraversal(const AdjacencyList &graph, const int start) {
   if (graph.empty()) {
     return {};
   }
@@ -40,7 +40,7 @@ inline vector<int> bfsTraversal(const AdjacencyList& graph, const int start) {
 }
 
 // T~O(N+E), S~O(N)
-inline vector<int> dfsTraversal(const AdjacencyList& graph, const int start) {
+inline vector<int> dfsTraversal(const AdjacencyList &graph, const int start) {
   if (graph.empty()) {
     return {};
   }
@@ -72,4 +72,4 @@ inline vector<int> dfsTraversal(const AdjacencyList& graph, const int start) {
   return order;
 }
 
-#endif  // GRAPH_TRAVERSAL_H_
+#endif // GRAPH_TRAVERSAL_H_

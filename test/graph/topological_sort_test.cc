@@ -25,19 +25,19 @@ TEST(TopologicalSortDfs, LinearGraph) {
 
 TEST(TopologicalSortDfs, FullGraph) {
   const AdjacencyList graph{
-      {3},        // 0
-      {3},        // 1
-      {0, 1},     // 2
-      {6, 7},     // 3
-      {0, 3, 5},  // 4
-      {9, 10},    // 5
-      {8},        // 6
-      {8, 9},     // 7
-      {11},       // 8
-      {11, 12},   // 9
-      {9},        // 10
-      {},         // 11
-      {},         // 12
+      {3},       // 0
+      {3},       // 1
+      {0, 1},    // 2
+      {6, 7},    // 3
+      {0, 3, 5}, // 4
+      {9, 10},   // 5
+      {8},       // 6
+      {8, 9},    // 7
+      {11},      // 8
+      {11, 12},  // 9
+      {9},       // 10
+      {},        // 11
+      {},        // 12
   };
 
   const vector<int> order = topologicalSortDfs(graph);
@@ -64,19 +64,19 @@ TEST(TopologicalSortKahn, LinearGraph) {
 
 TEST(TopologicalSortKahn, FullGraph) {
   const AdjacencyList graph{
-      {3},        // 0
-      {3},        // 1
-      {0, 1},     // 2
-      {6, 7},     // 3
-      {0, 3, 5},  // 4
-      {9, 10},    // 5
-      {8},        // 6
-      {8, 9},     // 7
-      {11},       // 8
-      {11, 12},   // 9
-      {9},        // 10
-      {},         // 11
-      {},         // 12
+      {3},       // 0
+      {3},       // 1
+      {0, 1},    // 2
+      {6, 7},    // 3
+      {0, 3, 5}, // 4
+      {9, 10},   // 5
+      {8},       // 6
+      {8, 9},    // 7
+      {11},      // 8
+      {11, 12},  // 9
+      {9},       // 10
+      {},        // 11
+      {},        // 12
   };
 
   const vector<int> order = topologicalSortKahn(graph);
@@ -88,5 +88,5 @@ TEST(TopologicalSortKahn, LoopGraph) {
       {}, {}, {0, 3}, {1, 6}, {0}, {2}, {5, 7}, {4},
   };
 
-  EXPECT_THROW(topologicalSortKahn(graph), const char*);
+  EXPECT_THROW(topologicalSortKahn(graph), const char *);
 }

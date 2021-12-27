@@ -4,7 +4,7 @@
 #include "graph/types.h"
 
 // T~O(E), S~(N+E)
-inline AdjacencyList invertAdjacencyList(const AdjacencyList& graph) {
+inline AdjacencyList invertAdjacencyList(const AdjacencyList &graph) {
   AdjacencyList inverted(graph.size());
 
   for (int node = 0; node < graph.size(); ++node) {
@@ -16,4 +16,4 @@ inline AdjacencyList invertAdjacencyList(const AdjacencyList& graph) {
   return inverted;
 }
 
-#endif  // GRAPH_MUTATION_H_
+#endif // GRAPH_MUTATION_H_

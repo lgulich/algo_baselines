@@ -29,7 +29,7 @@ TEST(InvertAdjacencyList, FullGraph) {
   };
 
   const AdjacencyList inverted = invertAdjacencyList(graph);
-  const AdjacencyList expected{{2, 4}, {3}, {5}, {2}, {7}, {6}, {3} ,{6}};
+  const AdjacencyList expected{{2, 4}, {3}, {5}, {2}, {7}, {6}, {3}, {6}};
   std::cout << "inverted\n";
   print(inverted);
 
@@ -38,4 +38,3 @@ TEST(InvertAdjacencyList, FullGraph) {
 
   expect_eq(inverted, expected);
 }
-

@@ -6,9 +6,8 @@
 #include "graph/mutation.h"
 #include "graph/types.h"
 
-inline void dfsExplore(
-    const int node, const AdjacencyList& graph, vector<int>* order,
-    vector<bool>* closed) {
+inline void dfsExplore(const int node, const AdjacencyList &graph,
+                       vector<int> *order, vector<bool> *closed) {
   if (closed->at(node)) {
     return;
   }
@@ -24,7 +23,7 @@ inline void dfsExplore(
 
 // T~O(N+E), S~O(N)
 // We assume that input graph has no loops.
-inline vector<int> topologicalSortDfs(const AdjacencyList& graph) {
+inline vector<int> topologicalSortDfs(const AdjacencyList &graph) {
   vector<int> order;
   order.reserve(order.size());
 
@@ -43,10 +42,10 @@ inline vector<int> topologicalSortDfs(const AdjacencyList& graph) {
 }
 
 // T~O(N+E), S~O(N+E)
-inline vector<int> topologicalSortKahn(const AdjacencyList& graph) {
+inline vector<int> topologicalSortKahn(const AdjacencyList &graph) {
   // T~O(E), S~O(N)
   vector<int> num_open_requirements(graph.size(), 0);
-  for (const auto& children : graph) {
+  for (const auto &children : graph) {
     for (const int child : children) {
       ++num_open_requirements[child];
     }
@@ -86,4 +85,4 @@ inline vector<int> topologicalSortKahn(const AdjacencyList& graph) {
   return order;
 }
 
-#endif  // GRAPH_TOPOLOGICAL_SORT_H_
+#endif // GRAPH_TOPOLOGICAL_SORT_H_
