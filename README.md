@@ -10,10 +10,24 @@ your own implementations.
 
 ### Graphs
 
-* Breadth First Search
+* Mutation - Invert Adjacency List
+Invert an adjacency list such that every edge points in the other direction.
+T~O(E), S~O(N+E)
+
+* Traversal - Breadth First Search
 Allows to traverse graph in a certain order.
 T~O(N+E), S~O(N)
 
-* Depth First Search
+* Traversal - Depth First Search
 Allows to traverse graph in a certain order.
+T~O(N+E), S~O(N)
+
+* Topological Sort - DFS Approach
+Find a order of the nodes such that all ancestors of a node come before the node
+itself.
+T~O(N+E), S~O(N)
+
+* Topological Sort - Kahn's Algorithm
+Find a order of the nodes such that all ancestors of a node come before the node
+itself.
 T~O(N+E), S~O(N)
