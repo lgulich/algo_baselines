@@ -4,6 +4,7 @@
 #include <limits>
 #include <queue>
 #include <unordered_set>
+#include <algorithm>
 
 #include "graph/types.h"
 
