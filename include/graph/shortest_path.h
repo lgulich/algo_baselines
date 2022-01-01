@@ -1,10 +1,10 @@
 #ifndef GRAPH_SHORTEST_PATH_H_
 #define GRAPH_SHORTEST_PATH_H_
 
+#include <algorithm>
 #include <limits>
 #include <queue>
 #include <unordered_set>
-#include <algorithm>
 
 #include "graph/types.h"
 
