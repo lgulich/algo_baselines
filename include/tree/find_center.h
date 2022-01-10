@@ -6,7 +6,7 @@
 // Finds the center node(s) of a graph.
 // We assume that the graph has the tree poperty.
 // T~(N), S~(N)
-inline vector<int> findCenter(const AdjacencyList& graph) {
+inline vector<int> findCenter(const AdjacencyList &graph) {
   if (graph.size() == 1) {
     return {0};
   }
@@ -49,4 +49,4 @@ inline vector<int> findCenter(const AdjacencyList& graph) {
   return leaves;
 }
 
-#endif  // GRAPH_FIND_CENTER_H_
+#endif // GRAPH_FIND_CENTER_H_

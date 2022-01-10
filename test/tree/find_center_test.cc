@@ -40,16 +40,16 @@ TEST(FindCenter, LinearGraph) {
 
 TEST(FindCenter, FullGraph) {
   const AdjacencyList directed{
-      {1},     // 0
-      {3, 4},  // 1
-      {3},     // 2
-      {6, 7},  // 3
-      {5, 8},  // 4
-      {},      // 5
-      {9},     // 6
-      {},      // 7
-      {},      // 8
-      {},      // 9
+      {1},    // 0
+      {3, 4}, // 1
+      {3},    // 2
+      {6, 7}, // 3
+      {5, 8}, // 4
+      {},     // 5
+      {9},    // 6
+      {},     // 7
+      {},     // 8
+      {},     // 9
   };
   const AdjacencyList undirected = makeUndirected(directed);
   const vector<int> center = findCenter(undirected);

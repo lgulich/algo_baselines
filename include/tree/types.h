@@ -1,19 +1,19 @@
 #ifndef TREE_TYPES_H_
 #define TREE_TYPES_H_
 
-#include <vector>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 struct Tree {
   int value;
-  vector<Tree*> children;
+  vector<Tree *> children;
 
   Tree(const int value) : value(value) {}
 };
 
-inline void deleteTree(Tree* tree) {
+inline void deleteTree(Tree *tree) {
   if (!tree) {
     return;
   }
@@ -24,7 +24,7 @@ inline void deleteTree(Tree* tree) {
   delete tree;
 }
 
-inline void print(const Tree* tree) {
+inline void print(const Tree *tree) {
   std::cout << tree->value << std::endl;
   for (const auto child : tree->children) {
     std::cout << "->" << child->value << std::endl;
@@ -35,4 +35,4 @@ inline void print(const Tree* tree) {
   }
 }
 
-#endif  // TREE_TYPES_H_
+#endif // TREE_TYPES_H_
