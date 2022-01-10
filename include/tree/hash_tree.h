@@ -3,6 +3,7 @@
 
 #include <numeric>
 #include <string>
+#include <algorithm>
 
 #include "tree/types.h"
 
