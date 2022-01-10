@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: DoozyX/clang-format-lint-action@v0.13
       with:
-        source: 'include/ src/ test/'
+        source: 'include/ test/'
         exclude: ''
         extensions: 'h,cpp,c,cc'
         clangFormatVersion: 12
