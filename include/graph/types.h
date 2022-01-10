@@ -1,8 +1,8 @@
 #ifndef GRAPH_TYPES_H_
 #define GRAPH_TYPES_H_
 
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using namespace std;
