@@ -1,9 +1,9 @@
 #ifndef TREE_HASH_TREE_H_
 #define TREE_HASH_TREE_H_
 
+#include <algorithm>
 #include <numeric>
 #include <string>
-#include <algorithm>
 
 #include "tree/types.h"
 
