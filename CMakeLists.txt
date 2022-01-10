@@ -28,10 +28,11 @@ gtest_discover_tests(graph_tests)
 
 add_executable(tree_tests
   test/tree/find_center_test.cc
-  test/tree/main.cc
-  test/tree/root_tree_test.cc
   test/tree/hash_tree_test.cc
   test/tree/is_isomorphic_test.cc
+  test/tree/lowest_common_ancestor_test.cc
+  test/tree/main.cc
+  test/tree/root_tree_test.cc
   )
 target_link_libraries(tree_tests gtest)
 gtest_discover_tests(tree_tests)
