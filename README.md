@@ -41,3 +41,21 @@ your own implementations.
 * Shortest Path - Dijkstra Algorithm<br>
   T\~O(E\*log(N)), S\~(N)<br>
   Find the shortest path between two nodes.
+
+### Trees
+
+* Find Center<br>
+  T\~O(N), S\~(N)<br>
+  Finds the center of a graph with the tree property.
+
+* Hash Tree<br>
+  T\~O(N\*log(N)), S\~(N)<br>
+  Computes the hash of a tree such that isomorphic trees have the same hash.
+
+* Root Tree<br>
+  T\~O(N), S\~(N)<br>
+  Creates a rooted tree from a graph with the tree property.
+
+* Determine Isomorphism<br>
+  T\~O(N\*log(N)), S\~(N)<br>
+  Determine if two unrooted trees are isomorphic (i.e. have same topology).

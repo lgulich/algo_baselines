@@ -16,15 +16,22 @@ include_directories(include)
 
 enable_testing()
 
-add_executable(all_tests
+add_executable(graph_tests
   test/graph/main.cc
   test/graph/mutation_test.cc
   test/graph/shortest_path_test.cc
   test/graph/topological_sort_test.cc
   test/graph/traversal_test.cc
   )
-target_link_libraries(all_tests
-  gtest
-  )
+target_link_libraries(graph_tests gtest)
+gtest_discover_tests(graph_tests)
 
-gtest_discover_tests(all_tests)
+add_executable(tree_tests
+  test/tree/find_center_test.cc
+  test/tree/main.cc
+  test/tree/root_tree_test.cc
+  test/tree/hash_tree_test.cc
+  test/tree/is_isomorphic_test.cc
+  )
+target_link_libraries(tree_tests gtest)
+gtest_discover_tests(tree_tests)

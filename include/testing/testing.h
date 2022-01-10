@@ -1,9 +1,11 @@
 #include <gtest/gtest.h>
 
 #include "graph/mutation.h"
+#include "graph/types.h"
+#include "tree/types.h"
 
 template <typename Element>
-void expect_eq(const vector<Element> &a, const vector<Element> &b) {
+void expect_eq(const vector<Element>& a, const vector<Element>& b) {
   EXPECT_EQ(a.size(), b.size());
 
   for (int i = 0; i < a.size(); ++i) {
@@ -11,24 +13,39 @@ void expect_eq(const vector<Element> &a, const vector<Element> &b) {
   }
 }
 
-inline void expect_eq(const AdjacencyList &a, const AdjacencyList &b) {
+inline void expect_eq(const AdjacencyList& a, const AdjacencyList& b) {
   EXPECT_EQ(a.size(), b.size());
 
   for (int node = 0; node < a.size(); ++node) {
-    const auto &a_children = a[node];
-    const auto &b_children = b[node];
+    const auto& a_children = a[node];
+    const auto& b_children = b[node];
 
     EXPECT_EQ(a_children.size(), b_children.size());
     for (const auto child : a_children) {
-      EXPECT_NE(std::find(b_children.begin(), b_children.end(), child),
-                b_children.end());
+      EXPECT_NE(
+          std::find(b_children.begin(), b_children.end(), child),
+          b_children.end());
     }
   }
 }
 
+inline void expect_eq(const Tree* a, const Tree* b) {
+  if (a == nullptr || b == nullptr) {
+    EXPECT_EQ(a, b);
+    return;
+  }
+
+  EXPECT_EQ(a->value, b->value);
+  ASSERT_EQ(a->children.size(), b->children.size());
+
+  for (int i = 0; i < a->children.size(); ++i) {
+    expect_eq(a->children[i], b->children[i]);
+  }
+}
+
 template <typename Element>
-void expect_topological_order(const vector<Element> &order,
-                              const AdjacencyList &graph) {
+void expect_topological_order(
+    const vector<Element>& order, const AdjacencyList& graph) {
   const AdjacencyList requirements = invertAdjacencyList(graph);
   vector<bool> closed(graph.size(), false);
 
