@@ -9,7 +9,7 @@
 
 // Determine if two trees are isomorphic, i.e. have the same topology.
 // T~(N*log(N)), S~(N)
-inline bool isIsomorphic(const AdjacencyList& a, const AdjacencyList& b) {
+inline bool isIsomorphic(const AdjacencyList &a, const AdjacencyList &b) {
   if (a.empty() && b.empty()) {
     return true;
   }
@@ -22,10 +22,10 @@ inline bool isIsomorphic(const AdjacencyList& a, const AdjacencyList& b) {
   }
 
   for (const int center_a : centers_a) {
-     Tree* tree_a = rootTree(a, center_a);
+    Tree *tree_a = rootTree(a, center_a);
     const string hash_a = hashTree(tree_a);
     for (const int center_b : centers_b) {
-       Tree* tree_b = rootTree(a, center_a);
+      Tree *tree_b = rootTree(a, center_a);
       const string hash_b = hashTree(tree_b);
       deleteTree(tree_b);
 
@@ -39,4 +39,4 @@ inline bool isIsomorphic(const AdjacencyList& a, const AdjacencyList& b) {
   return false;
 }
 
-#endif  // TREE_IS_ISOMORPHIC_H_
+#endif // TREE_IS_ISOMORPHIC_H_

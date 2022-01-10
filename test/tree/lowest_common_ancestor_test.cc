@@ -12,7 +12,7 @@ TEST(LowestCommonAncestor, LinearGraph) {
       {3},
       {},
   });
-  Tree* tree = rootTree(graph, 0);
+  Tree *tree = rootTree(graph, 0);
 
   EXPECT_EQ(lowestCommonAncestor(tree, 2, 2), 2);
   EXPECT_EQ(lowestCommonAncestor(tree, 1, 3), 1);
@@ -24,18 +24,18 @@ TEST(LowestCommonAncestor, LinearGraph) {
 
 TEST(LowestCommonAncestor, FullGraph) {
   const AdjacencyList graph = makeUndirected({
-      {1, 4, 5},  // 0
-      {2, 3},     // 1
-      {},         // 2
-      {},         // 3
-      {},         // 4
-      {6},        // 5
-      {7, 8, 9},  // 6
-      {},         // 7
-      {},         // 8
-      {},         // 9
+      {1, 4, 5}, // 0
+      {2, 3},    // 1
+      {},        // 2
+      {},        // 3
+      {},        // 4
+      {6},       // 5
+      {7, 8, 9}, // 6
+      {},        // 7
+      {},        // 8
+      {},        // 9
   });
-  Tree* tree = rootTree(graph, 0);
+  Tree *tree = rootTree(graph, 0);
 
   EXPECT_EQ(lowestCommonAncestor(tree, 2, 3), 1);
   EXPECT_EQ(lowestCommonAncestor(tree, 2, 7), 0);
@@ -43,5 +43,4 @@ TEST(LowestCommonAncestor, FullGraph) {
   EXPECT_EQ(lowestCommonAncestor(tree, 1, 6), 0);
 
   deleteTree(tree);
-
 }
