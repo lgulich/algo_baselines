@@ -2,6 +2,7 @@
 #define GRAPH_TYPES_H_
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
 
 using namespace std;
