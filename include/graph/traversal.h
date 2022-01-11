@@ -7,10 +7,8 @@
 #include "graph/types.h"
 
 // T~O(N+E), S~O(N)
-inline vector<int> bfsTraversal(const AdjacencyList &graph, const int start) {
-  if (graph.empty()) {
-    return {};
-  }
+inline vector<int> bfsTraversal(const AdjacencyList& graph, const int start) {
+  if (graph.empty()) { return {}; }
 
   vector<int> order;
   order.reserve(graph.size());
@@ -27,9 +25,7 @@ inline vector<int> bfsTraversal(const AdjacencyList &graph, const int start) {
     order.push_back(current);
 
     for (const int child : graph.at(current)) {
-      if (closed[child]) {
-        continue;
-      }
+      if (closed[child]) { continue; }
 
       open.push(child);
       closed[child] = true;
@@ -40,10 +36,8 @@ inline vector<int> bfsTraversal(const AdjacencyList &graph, const int start) {
 }
 
 // T~O(N+E), S~O(N)
-inline vector<int> dfsTraversal(const AdjacencyList &graph, const int start) {
-  if (graph.empty()) {
-    return {};
-  }
+inline vector<int> dfsTraversal(const AdjacencyList& graph, const int start) {
+  if (graph.empty()) { return {}; }
 
   vector<int> order;
   order.reserve(graph.size());
@@ -60,9 +54,7 @@ inline vector<int> dfsTraversal(const AdjacencyList &graph, const int start) {
     order.push_back(current);
 
     for (const int child : graph.at(current)) {
-      if (closed[child]) {
-        continue;
-      }
+      if (closed[child]) { continue; }
 
       open.push(child);
       closed[child] = true;
@@ -72,4 +64,4 @@ inline vector<int> dfsTraversal(const AdjacencyList &graph, const int start) {
   return order;
 }
 
-#endif // GRAPH_TRAVERSAL_H_
+#endif  // GRAPH_TRAVERSAL_H_

@@ -6,11 +6,10 @@
 #include "graph/mutation.h"
 #include "graph/types.h"
 
-inline void dfsExplore(const int node, const AdjacencyList &graph,
-                       vector<int> *order, vector<bool> *closed) {
-  if (closed->at(node)) {
-    return;
-  }
+inline void dfsExplore(
+    const int node, const AdjacencyList& graph, vector<int>* order,
+    vector<bool>* closed) {
+  if (closed->at(node)) { return; }
 
   closed->at(node) = true;
 
@@ -23,16 +22,14 @@ inline void dfsExplore(const int node, const AdjacencyList &graph,
 
 // T~O(N+E), S~O(N)
 // We assume that input graph has no loops.
-inline vector<int> topologicalSortDfs(const AdjacencyList &graph) {
+inline vector<int> topologicalSortDfs(const AdjacencyList& graph) {
   vector<int> order;
   order.reserve(order.size());
 
   vector<bool> closed(graph.size(), false);
 
   for (int node = 0; node < graph.size(); ++node) {
-    if (closed[node]) {
-      continue;
-    }
+    if (closed[node]) { continue; }
 
     dfsExplore(node, graph, &order, &closed);
   }
@@ -42,22 +39,18 @@ inline vector<int> topologicalSortDfs(const AdjacencyList &graph) {
 }
 
 // T~O(N+E), S~O(N+E)
-inline vector<int> topologicalSortKahn(const AdjacencyList &graph) {
+inline vector<int> topologicalSortKahn(const AdjacencyList& graph) {
   // T~O(E), S~O(N)
   vector<int> num_open_requirements(graph.size(), 0);
-  for (const auto &children : graph) {
-    for (const int child : children) {
-      ++num_open_requirements[child];
-    }
+  for (const auto& children : graph) {
+    for (const int child : children) { ++num_open_requirements[child]; }
   }
 
   // T~O(N), S~O(N)
   vector<int> open;
   open.reserve(graph.size());
   for (int node = 0; node < graph.size(); ++node) {
-    if (num_open_requirements[node] == 0) {
-      open.push_back(node);
-    }
+    if (num_open_requirements[node] == 0) { open.push_back(node); }
   }
 
   // T~O(N), S~O(N)
@@ -78,11 +71,9 @@ inline vector<int> topologicalSortKahn(const AdjacencyList &graph) {
     }
   }
 
-  if (order.size() != graph.size()) {
-    throw "Graph contains loop.";
-  }
+  if (order.size() != graph.size()) { throw "Graph contains loop."; }
 
   return order;
 }
 
-#endif // GRAPH_TOPOLOGICAL_SORT_H_
+#endif  // GRAPH_TOPOLOGICAL_SORT_H_

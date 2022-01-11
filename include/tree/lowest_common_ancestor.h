@@ -6,8 +6,8 @@
 #include "graph/types.h"
 #include "tree/types.h"
 
-inline void eulerianTour(Tree *tree, vector<int> *order, vector<int> *depths,
-                         const int depth) {
+inline void eulerianTour(
+    Tree* tree, vector<int>* order, vector<int>* depths, const int depth) {
   order->push_back(tree->value);
   depths->push_back(depth);
 
@@ -19,7 +19,7 @@ inline void eulerianTour(Tree *tree, vector<int> *order, vector<int> *depths,
 }
 
 // T~(N), S~(N)
-inline int lowestCommonAncestor(Tree *tree, const int a, const int b) {
+inline int lowestCommonAncestor(Tree* tree, const int a, const int b) {
   // S~O(N), because eulerian tour always needs 2*N-1 nodes.
   vector<int> order;
   vector<int> depths;
@@ -32,9 +32,7 @@ inline int lowestCommonAncestor(Tree *tree, const int a, const int b) {
   // Find idx of b in eulerian order. T~O(N)
   int upper_idx = std::find(order.begin(), order.end(), b) - order.begin();
 
-  if (upper_idx < lower_idx) {
-    std::swap(lower_idx, upper_idx);
-  }
+  if (upper_idx < lower_idx) { std::swap(lower_idx, upper_idx); }
 
   // Find idx of min depth between a and b in eulerian order. T~O(N)
   // For multiple queries this could be improved by using a sparse table (then
@@ -46,4 +44,4 @@ inline int lowestCommonAncestor(Tree *tree, const int a, const int b) {
   return order[min_depth_idx];
 }
 
-#endif // TREE_LOWEST_COMMON_ANCESTOR_H_
+#endif  // TREE_LOWEST_COMMON_ANCESTOR_H_

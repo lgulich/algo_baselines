@@ -2,9 +2,11 @@
 Language: Cpp
 BasedOnStyle: Google
 ColumnLimit: 80
+
+DerivePointerAlignment: false
 PointerAlignment: Left
 
-AllowShortFunctionsOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: All
 AllowShortBlocksOnASingleLine: Always
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortEnumsOnASingleLine: true

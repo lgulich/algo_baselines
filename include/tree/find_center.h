@@ -6,10 +6,8 @@
 // Finds the center node(s) of a graph.
 // We assume that the graph has the tree poperty.
 // T~(N), S~(N)
-inline vector<int> findCenter(const AdjacencyList &graph) {
-  if (graph.size() == 1) {
-    return {0};
-  }
+inline vector<int> findCenter(const AdjacencyList& graph) {
+  if (graph.size() == 1) { return {0}; }
 
   // Compute out degrees of all nodes.
   vector<int> out_degrees(graph.size(), 0);
@@ -20,9 +18,7 @@ inline vector<int> findCenter(const AdjacencyList &graph) {
   // Find all leaves of complete graph.
   vector<int> leaves;
   for (int node = 0; node < graph.size(); ++node) {
-    if (out_degrees[node] == 1) {
-      leaves.push_back(node);
-    }
+    if (out_degrees[node] == 1) { leaves.push_back(node); }
   }
 
   int num_touched = leaves.size();
@@ -49,4 +45,4 @@ inline vector<int> findCenter(const AdjacencyList &graph) {
   return leaves;
 }
 
-#endif // GRAPH_FIND_CENTER_H_
+#endif  // GRAPH_FIND_CENTER_H_
