@@ -15,7 +15,7 @@ jobs:
         exclude: ''
         extensions: 'h,cpp,c,cc'
         clangFormatVersion: 13
-        style: file:.clang-formato
+        style: file:.clang-format
         inplace: False
     - uses: EndBug/add-and-commit@v4
       with:
