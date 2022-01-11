@@ -1,4 +1,4 @@
-# Algo Baselines [![CI](https://github.com/lgulich/algo_baselines/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/lgulich/algo_baselines/actions/workflows/ci.yml)
+# Algo Baselines [![CI](https://github.com/lgulich/algo_baselines/actions/workflows/build_and_test.yml/badge.svg?branch=master)](https://github.com/lgulich/algo_baselines/actions/workflows/ci.yml)
 
 Baseline implementations for common algorithms in C++.
 
