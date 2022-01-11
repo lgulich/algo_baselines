@@ -6,15 +6,14 @@ The code in this repo will probably not be generic enough that you can use it
 for your own problems, but feel free to use the implementations as a guide for
 your own implementations.
 
-## Algorithms
-
-
-### Data Strucutres
+## Data Strucutres
 
 * Sparse Table<br>
   Data structure to allow fast range-queries (here for minimum values).<br>
   Creation: T\~O(N\*log(N)), S\~O(N\*log(N))<br>
   Query: T\~O(1), S\~O(1)
+
+## Algorithms
 
 ### Graphs
 
