@@ -1,4 +1,4 @@
-name: CI
+name: Build and Test
 
 on:
   pull_request:
@@ -9,6 +9,7 @@ env:
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
 
     steps:
