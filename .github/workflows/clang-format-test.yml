@@ -1,0 +1,26 @@
+
+name: Clang Format
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: DoozyX/clang-format-lint-action@v0.13
+      with:
+        source: 'include/ test/'
+        exclude: ''
+        extensions: 'h,cpp,c,cc'
+        clangFormatVersion: 13
+        style: file
+        inplace: False
+    - uses: EndBug/add-and-commit@v4
+      with:
+        author_name: Clang Format Bot
+        author_email: robot@example.com
+        message: 'Committing clang-format changes'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
