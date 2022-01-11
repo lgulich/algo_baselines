@@ -37,7 +37,7 @@ int searchPatternKmp(const vector<int>& data, const vector<int>& pattern) {
 
   while (data_idx < data.size()) {
     if (data[data_idx] == pattern[pattern_idx]) {
-      if (pattern_idx == pattern.size()-1) {
+      if (pattern_idx == pattern.size() - 1) {
         return true;
       } else {
         ++data_idx;
@@ -52,6 +52,5 @@ int searchPatternKmp(const vector<int>& data, const vector<int>& pattern) {
 
   return false;
 }
-
 
 #endif  // SEARCH_SEARCH_PATTERN_KMP_H_

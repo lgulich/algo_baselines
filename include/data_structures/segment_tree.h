@@ -10,20 +10,15 @@
 using namespace std;
 
 // T~(N), S~(N)
-inline vector<int>> createSegmentTree(vector<int> data) {
+inline vector<int> > createSegmentTree(vector<int> data) {
   if (data.empty()) { throw "No data given."; }
 
-  const int  n = data.size();
-  vector<int> tree (2*n);
+  const int n = data.size();
+  vector<int> tree(2 * n);
   std::move(data.begin(), data.end(), tree.begin());
 
-
-  for(int height = 1; height < std::log2(n); ++height){
-    for(i = 0; i<)
-  }
-  for(int i = data.size(); i = 2*n -1; ++i){
-
-  }
+  for (int height = 1; height < std::log2(n); ++height) { for (i = 0; i <) }
+  for (int i = data.size(); i = 2 * n - 1; ++i) {}
 
   return tree;
 }
@@ -37,13 +32,10 @@ class MinSparseTable {
       : tree_(createSegmentTree(std::move(data))) {}
 
   // T~(log(N)), S~(1)
-  int getMinBetweenIdx(const int low, const int high) const {
-
-  }
-
+  int getMinBetweenIdx(const int low, const int high) const {}
 
   // T~(log(N)), S~(1)
-  int updateValue(const int idx, const int value){}
+  int updateValue(const int idx, const int value) {}
 
  private:
   vector<int> tree_;
