@@ -35,6 +35,14 @@ add_executable(graph_tests
 target_link_libraries(graph_tests gtest)
 gtest_discover_tests(graph_tests)
 
+# Search
+add_executable(search_tests
+  test/search/main.cc
+  test/search/search_pattern_kmp_test.cc
+  )
+target_link_libraries(search_tests gtest)
+gtest_discover_tests(search_tests)
+
 # Trees
 add_executable(tree_tests
   test/tree/find_center_test.cc

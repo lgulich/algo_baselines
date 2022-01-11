@@ -49,6 +49,15 @@ your own implementations.
   T\~O(E\*log(N)), S\~(N)<br>
   Find the shortest path between two nodes.
 
+
+### Search
+
+* Pattern Matching - Knuth-Morris-Pratt Algorithm<br>
+  T\~O(N+M), S\~(M)<br>
+  Find if a pattern is contained in a vector. (N is size of vector, M is size of
+  pattern).
+
+
 ### Trees
 
 * Find Center<br>
