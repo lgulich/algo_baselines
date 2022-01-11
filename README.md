@@ -8,6 +8,14 @@ your own implementations.
 
 ## Algorithms
 
+
+### Data Strucutres
+
+* Sparse Table<br>
+  Data structure to allow fast range-queries (here for minimum values).<br>
+  Creation: T\~O(N\*log(N)), S\~O(N\*log(N))<br>
+  Query: T\~O(1), S\~O(1)
+
 ### Graphs
 
 * Mutation - Invert Adjacency List<br>
