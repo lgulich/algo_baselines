@@ -45,7 +45,7 @@ inline void expect_eq(const Tree* a, const Tree* b) {
 inline void expect_eq(const List* list, const vector<int>& vec) {
   auto vec_it = vec.begin();
 
-  while(list){
+  while (list) {
     EXPECT_EQ(list->value, *vec_it);
     list = list->next;
     ++vec_it;

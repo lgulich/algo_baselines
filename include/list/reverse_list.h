@@ -3,7 +3,6 @@
 
 #include "list/types.h"
 
-
 // T~O(N), S~O(1)
 List* reverseList(List* list) {
   if (!list) { return nullptr; }
