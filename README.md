@@ -65,6 +65,11 @@ your own implementations.
   T\~O(E\*log(N)), S\~(N)<br>
   Find the shortest path between two nodes.
 
+### Lists
+
+* Reverse List<br>
+  T\~O(N), S\~(1)<br>
+  Reverse the linked list.
 
 ### Search
 
