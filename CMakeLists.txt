@@ -48,6 +48,15 @@ target_link_libraries(graph_tests gtest)
 gtest_discover_tests(graph_tests)
 
 
+## Lists
+add_executable(list_tests
+  test/list/main.cc
+  test/list/reverse_list_test.cc
+  )
+target_link_libraries(list_tests gtest)
+gtest_discover_tests(list_tests)
+
+
 ## Search
 add_executable(search_tests
   test/search/main.cc

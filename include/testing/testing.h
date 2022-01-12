@@ -2,6 +2,7 @@
 
 #include "graph/mutation.h"
 #include "graph/types.h"
+#include "list/types.h"
 #include "tree/types.h"
 
 template <typename Element>
@@ -39,6 +40,18 @@ inline void expect_eq(const Tree* a, const Tree* b) {
   for (int i = 0; i < a->children.size(); ++i) {
     expect_eq(a->children[i], b->children[i]);
   }
+}
+
+inline void expect_eq(const List* list, const vector<int>& vec) {
+  auto vec_it = vec.begin();
+
+  while (list) {
+    EXPECT_EQ(list->value, *vec_it);
+    list = list->next;
+    ++vec_it;
+  }
+
+  EXPECT_EQ(vec_it, vec.end());
 }
 
 template <typename Element>
