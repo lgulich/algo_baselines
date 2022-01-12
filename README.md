@@ -6,7 +6,7 @@ The code in this repo will probably not be generic enough that you can use it
 for your own problems, but feel free to use the implementations as a guide for
 your own implementations.
 
-## Data Strucutres
+## Data Structures
 
 * Sparse Table<br>
   Data structure to allow fast range-queries (here for minimum values).<br>
@@ -14,6 +14,22 @@ your own implementations.
   Query: T\~O(1), S\~O(1)
 
 ## Algorithms
+
+### Dynamic Programming
+
+* Knapsack<br>
+  Find the items to fill a bag s.t. the value of the bag is maximized while
+  constraining the maximum capacity C.<br>
+  T\~O(N\*C), S\~O(N\*C)
+
+* Mountain Scenes<br>
+  Calculate the number of possible ways to draw a mountain scene.<br>
+  T\~O(W\*S), S\~O(W\*S), with image width W and max rope length S.
+
+* Narrow Art Gallery<br>
+  Calculate the maximum sum of gallery rooms, while closing K rooms and keeping
+  a way to walk through the gallery.
+  T\~O(N\*K), S\~O(N\*K), with gallery length N
 
 ### Graphs
 

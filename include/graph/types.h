@@ -56,4 +56,10 @@ ostream& print(const vector<Element>& vec) {
   return std::cout << ']';
 }
 
+template <typename Element>
+ostream& printMat(const vector<vector<Element>>& vec) {
+  for (const auto& row : vec) { print(row) << std::endl; }
+  return std::cout;
+}
+
 #endif  // GRAPH_TYPES_H_

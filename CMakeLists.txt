@@ -16,7 +16,7 @@ include_directories(include)
 
 enable_testing()
 
-# Datastructures
+## Datastructures
 add_executable(data_structures_tests
   test/data_structures/sparse_table_test.cc
   test/data_structures/main.cc
@@ -24,7 +24,19 @@ add_executable(data_structures_tests
 target_link_libraries(data_structures_tests gtest)
 gtest_discover_tests(data_structures_tests)
 
-# Graphs
+
+## Dynamic Programming
+add_executable(dynamic_programming_tests
+  test/dynamic_programming/mountain_scenes_test.cc
+  test/dynamic_programming/narrow_art_gallery_test.cc
+  test/dynamic_programming/knapsack_test.cc
+  test/dynamic_programming/main.cc
+  )
+target_link_libraries(dynamic_programming_tests gtest)
+gtest_discover_tests(dynamic_programming_tests)
+
+
+## Graphs
 add_executable(graph_tests
   test/graph/main.cc
   test/graph/mutation_test.cc
@@ -35,7 +47,8 @@ add_executable(graph_tests
 target_link_libraries(graph_tests gtest)
 gtest_discover_tests(graph_tests)
 
-# Search
+
+## Search
 add_executable(search_tests
   test/search/main.cc
   test/search/search_pattern_kmp_test.cc
@@ -43,7 +56,8 @@ add_executable(search_tests
 target_link_libraries(search_tests gtest)
 gtest_discover_tests(search_tests)
 
-# Trees
+
+## Trees
 add_executable(tree_tests
   test/tree/find_center_test.cc
   test/tree/hash_tree_test.cc
