@@ -13,18 +13,18 @@ int maxKnapsackValue(
   const int num_items = weights.size();
   if (num_items == 0) { return 0; }
 
-  vector<vector<int>> max_value(capacity + 1, vector<int>(num_items+1, 0));
+  vector<vector<int>> max_value(capacity + 1, vector<int>(num_items + 1, 0));
 
   for (int c = 1; c <= capacity; ++c) {
     for (int i = 1; i <= num_items; ++i) {
-      const int weight_i = weights[i-1];
-      const int value_i = values[i-1];
+      const int weight_i = weights[i - 1];
+      const int value_i = values[i - 1];
 
       if (weight_i > c) {
         max_value[c][i] = max_value[c][i - 1];
       } else {
-        max_value[c][i] = max(
-            max_value[c][i - 1], value_i + max_value[c - weight_i][i - 1]);
+        max_value[c][i] =
+            max(max_value[c][i - 1], value_i + max_value[c - weight_i][i - 1]);
       }
     }
   }

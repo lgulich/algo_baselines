@@ -58,9 +58,7 @@ ostream& print(const vector<Element>& vec) {
 
 template <typename Element>
 ostream& printMat(const vector<vector<Element>>& vec) {
-  for(const auto& row : vec){
-    print(row)<<std::endl;
-  }
+  for (const auto& row : vec) { print(row) << std::endl; }
   return std::cout;
 }
 

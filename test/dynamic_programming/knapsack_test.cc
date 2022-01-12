@@ -19,11 +19,11 @@ TEST(Knapsack, NoItems) {
 TEST(Knapsack, CapacityIsBigEnoughForAllItems) {
   const vector<int> weights{3, 4, 6, 5};
   const vector<int> values{2, 3, 1, 4};
-  EXPECT_EQ(maxKnapsackValue(weights,values, 100), 10);
+  EXPECT_EQ(maxKnapsackValue(weights, values, 100), 10);
 }
 
 TEST(Knapsack, GeneralCase) {
   const vector<int> weights{3, 4, 6, 5};
   const vector<int> values{2, 3, 1, 4};
-  EXPECT_EQ(maxKnapsackValue(weights,values, 8), 6);
+  EXPECT_EQ(maxKnapsackValue(weights, values, 8), 6);
 }

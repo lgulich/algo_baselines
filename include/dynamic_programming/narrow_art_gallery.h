@@ -21,7 +21,6 @@ int maxValue(
     }
   }
 
-
   // We have already closed all needed rooms.
   if (k == 0) {
     const int res = rooms[n][0] + rooms[n][1] + maxValue(n - 1, k, 0, rooms);

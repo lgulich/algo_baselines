@@ -10,14 +10,13 @@
 using namespace std;
 
 int invalidScenes(const int S, const int W, const int H) {
-  const int max_full_rows = std::min(H,S/W);
+  const int max_full_rows = std::min(H, S / W);
   return max_full_rows + 1;
 }
 
 // T~O(S*W), S~O(S*W);
 int allScenesRecursive(
     const int S, const int W, const int H, vector<vector<int>>& memo) {
-
   if (S < 0) { return 0; }
 
   if (memo[S][W] != -1) { return memo[S][W]; }
@@ -28,7 +27,9 @@ int allScenesRecursive(
   } else if (W == 1) {
     res = min(S + 1, H + 1);
   } else {
-    for (int i = 0; i <= H; ++i) { res += allScenesRecursive(S - i, W - 1, H, memo); }
+    for (int i = 0; i <= H; ++i) {
+      res += allScenesRecursive(S - i, W - 1, H, memo);
+    }
   }
 
   memo[S][W] = res;
@@ -36,19 +37,15 @@ int allScenesRecursive(
 }
 
 // T~O(S*W), S~O(S);
-int allScenesIterative( const int S, const int W, const int H) {
-  vector<int> ways(S+1);
+int allScenesIterative(const int S, const int W, const int H) {
+  vector<int> ways(S + 1);
   // Initialize ways for W = 1
-  for(int s = 0; s<=S; ++s){
-    ways[s]=min(s+1,H+1);
-  }
+  for (int s = 0; s <= S; ++s) { ways[s] = min(s + 1, H + 1); }
 
-  for(int w = 2; w<=W; ++w){
-    vector<int> new_ways(S+1,0);
-    for(int s = 0; s<=S; ++s){
-      for(int i = max(s-H, 0); i<=s; ++i){
-        new_ways[s] += ways[i];
-      }
+  for (int w = 2; w <= W; ++w) {
+    vector<int> new_ways(S + 1, 0);
+    for (int s = 0; s <= S; ++s) {
+      for (int i = max(s - H, 0); i <= s; ++i) { new_ways[s] += ways[i]; }
     }
     ways = new_ways;
   }
