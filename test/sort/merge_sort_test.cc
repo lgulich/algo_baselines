@@ -12,14 +12,14 @@ TEST(MergeSort, MergeEmptyVector) {
 
 TEST(MergeSort, MergeOneElement) {
   vector<int> data{1};
-  merge(data.begin(), data.begin() +1, data.end());
+  merge(data.begin(), data.begin() + 1, data.end());
   expect_eq(data, {1});
 }
 
 TEST(MergeSort, MergeTwoElement) {
-  vector<int> data{2,1};
-  merge(data.begin(), data.begin() +1, data.end());
-  expect_eq(data, {1,2});
+  vector<int> data{2, 1};
+  merge(data.begin(), data.begin() + 1, data.end());
+  expect_eq(data, {1, 2});
 }
 
 TEST(MergeSort, MergeEqualSize) {

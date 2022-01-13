@@ -49,5 +49,4 @@ inline ostream& print(const WeightedAdjacencyList& graph) {
   return std::cout;
 }
 
-
 #endif  // GRAPH_TYPES_H_
