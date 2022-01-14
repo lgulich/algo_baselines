@@ -1,3 +1,6 @@
+#ifndef TESTING_TESTING_H_
+#define TESTING_TESTING_H_
+
 #include <gtest/gtest.h>
 
 #include "graph/mutation.h"
@@ -67,3 +70,5 @@ void expect_topological_order(
     closed[node] = true;
   }
 }
+
+#endif  // TESTING_TESTING_H_

@@ -49,17 +49,4 @@ inline ostream& print(const WeightedAdjacencyList& graph) {
   return std::cout;
 }
 
-template <typename Element>
-ostream& print(const vector<Element>& vec) {
-  std::cout << '[';
-  for (const auto& element : vec) { std::cout << element << ','; }
-  return std::cout << ']';
-}
-
-template <typename Element>
-ostream& printMat(const vector<vector<Element>>& vec) {
-  for (const auto& row : vec) { print(row) << std::endl; }
-  return std::cout;
-}
-
 #endif  // GRAPH_TYPES_H_
