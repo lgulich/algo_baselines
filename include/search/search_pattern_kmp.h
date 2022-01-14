@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<int> createPrefixArray(const vector<int>& pattern) {
+inline vector<int> createPrefixArray(const vector<int>& pattern) {
   vector<int> prefix(pattern.size(), -1);
 
   int i = 0;
@@ -29,7 +29,8 @@ vector<int> createPrefixArray(const vector<int>& pattern) {
   return prefix;
 }
 
-int searchPatternKmp(const vector<int>& data, const vector<int>& pattern) {
+inline int searchPatternKmp(
+    const vector<int>& data, const vector<int>& pattern) {
   const vector<int> prefix = createPrefixArray(pattern);
 
   int pattern_idx = 0;

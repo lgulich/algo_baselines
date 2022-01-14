@@ -61,6 +61,8 @@ gtest_discover_tests(list_tests)
 add_executable(search_tests
   test/search/main.cc
   test/search/search_pattern_kmp_test.cc
+  test/search/binary_search_test.cc
+  test/search/search_smaller_value_test.cc
   )
 target_link_libraries(search_tests gtest)
 gtest_discover_tests(search_tests)

@@ -78,6 +78,24 @@ your own implementations.
   Find if a pattern is contained in a vector. (N is size of vector, M is size of
   pattern).
 
+* Binary Search<br>
+  T\~O(log(N)), S\~(1)<br>
+  Find position of an element in a sorted vector.
+
+* Find Smaller Element<br>
+  T\~O(log(N)), S\~(1)<br>
+  Find element or next smaller element in a sorted vector.
+
+### Sort
+
+* Selection Sort <br>
+  T\~O(N^2), S\~(1)<br>
+  Sort by putting minimum element to front, continue with remaining vector.
+
+* Merge Sort <br>
+  T\~O(N\*log(N)), S\~(N)<br>
+  Recursively split vector in half, sort both halves and then merge sorted
+  halves.
 
 ### Trees
 
