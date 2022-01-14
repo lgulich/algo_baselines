@@ -66,6 +66,16 @@ target_link_libraries(search_tests gtest)
 gtest_discover_tests(search_tests)
 
 
+## Sort
+add_executable(sort_tests
+  test/sort/main.cc
+  test/sort/merge_sort_test.cc
+  test/sort/general_sort_test.cc
+  )
+target_link_libraries(sort_tests gtest)
+gtest_discover_tests(sort_tests)
+
+
 ## Trees
 add_executable(tree_tests
   test/tree/find_center_test.cc
