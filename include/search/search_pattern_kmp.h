@@ -29,7 +29,8 @@ inline vector<int> createPrefixArray(const vector<int>& pattern) {
   return prefix;
 }
 
-inline int searchPatternKmp(const vector<int>& data, const vector<int>& pattern) {
+inline int searchPatternKmp(
+    const vector<int>& data, const vector<int>& pattern) {
   const vector<int> prefix = createPrefixArray(pattern);
 
   int pattern_idx = 0;

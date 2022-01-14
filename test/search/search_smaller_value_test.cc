@@ -18,4 +18,3 @@ TEST(SearchSmallerElement, FullVector) {
   EXPECT_EQ(searchSmallerElement(data, 21), 21);
   EXPECT_EQ(searchSmallerElement(data, 22), 21);
 }
-

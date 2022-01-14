@@ -16,15 +16,15 @@ TEST(BinarySearch, SingleElement) {
 }
 
 TEST(BinarySearch, TwoElements) {
-  const vector<int> data {0,1};
-  EXPECT_EQ(binarySearchIdx(data, -1),-1);
-  EXPECT_EQ(binarySearchIdx(data, 0),0);
+  const vector<int> data{0, 1};
+  EXPECT_EQ(binarySearchIdx(data, -1), -1);
+  EXPECT_EQ(binarySearchIdx(data, 0), 0);
   EXPECT_EQ(binarySearchIdx(data, 1), 1);
-  EXPECT_EQ(binarySearchIdx(data, 2),-1);
+  EXPECT_EQ(binarySearchIdx(data, 2), -1);
 }
 
 TEST(BinarySearch, EvenNumberOfElements) {
-  const vector<int> data {0,1,2,3,4,5};
+  const vector<int> data{0, 1, 2, 3, 4, 5};
   EXPECT_EQ(binarySearchIdx(data, -1), -1);
   EXPECT_EQ(binarySearchIdx(data, 0), 0);
   EXPECT_EQ(binarySearchIdx(data, 1), 1);
@@ -36,7 +36,7 @@ TEST(BinarySearch, EvenNumberOfElements) {
 }
 
 TEST(BinarySearch, OddNumberOfElements) {
-  const vector<int> data {0,1,2,3,4,5,6};
+  const vector<int> data{0, 1, 2, 3, 4, 5, 6};
   EXPECT_EQ(binarySearchIdx(data, -1), -1);
   EXPECT_EQ(binarySearchIdx(data, 0), 0);
   EXPECT_EQ(binarySearchIdx(data, 1), 1);
