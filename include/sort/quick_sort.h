@@ -31,7 +31,6 @@ inline void quickSortRecursive(
   quickSortRecursive(pivot + 1, end);
 }
 
-
 // Sort by recursively partitioning array into elements smaller and bigger than
 // pivot.
 // T~O(N*log(N)), S~O(log(N))

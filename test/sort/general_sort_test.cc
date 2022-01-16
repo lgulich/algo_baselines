@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "sort/merge_sort.h"
-#include "sort/selection_sort.h"
 #include "sort/quick_sort.h"
+#include "sort/selection_sort.h"
 #include "testing/testing.h"
 
 using SortFunction = vector<int> (*)(const vector<int>&);
