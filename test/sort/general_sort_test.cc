@@ -2,6 +2,7 @@
 
 #include "sort/merge_sort.h"
 #include "sort/selection_sort.h"
+#include "sort/quick_sort.h"
 #include "testing/testing.h"
 
 using SortFunction = vector<int> (*)(const vector<int>&);
@@ -50,3 +51,5 @@ INSTANTIATE_TEST_SUITE_P(
     MergeSort, GeneralSortingTests, testing::Values(&mergeSort));
 INSTANTIATE_TEST_SUITE_P(
     SelectionSort, GeneralSortingTests, testing::Values(&selectionSort));
+INSTANTIATE_TEST_SUITE_P(
+    QuickSort, GeneralSortingTests, testing::Values(&quickSort));
