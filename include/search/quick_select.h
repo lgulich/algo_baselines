@@ -1,8 +1,8 @@
 #ifndef SEARCH_QUICK_SELECT_H_
 #define SEARCH_QUICK_SELECT_H_
 
-#include <vector>
 #include <iostream>
+#include <vector>
 
 #include "sort/quick_sort.h"
 

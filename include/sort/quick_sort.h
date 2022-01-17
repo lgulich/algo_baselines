@@ -37,8 +37,8 @@ inline void quickSortRecursive(
 // pivot.
 // T~O(N*log(N)), S~O(log(N))
 inline void quickSort(vector<int>* data) {
-  if (data->empty()) { return ; }
-  if (data->size() == 1) { return ; }
+  if (data->empty()) { return; }
+  if (data->size() == 1) { return; }
 
   quickSortRecursive(data->begin(), data->end());
 }
