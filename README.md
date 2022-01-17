@@ -88,14 +88,18 @@ your own implementations.
 
 ### Sort
 
-* Selection Sort <br>
-  T\~O(N^2), S\~(1)<br>
-  Sort by putting minimum element to front, continue with remaining vector.
-
 * Merge Sort <br>
   T\~O(N\*log(N)), S\~(N)<br>
   Recursively split vector in half, sort both halves and then merge sorted
   halves.
+
+* Quick Sort <br>
+  T\~O(N\*log(N)), S\~(log(N))<br>
+  Recursively partition array into elements smaller and bigger than pivot.
+
+* Selection Sort <br>
+  T\~O(N^2), S\~(1)<br>
+  Sort by putting minimum element to front, continue with remaining vector.
 
 ### Trees
 
