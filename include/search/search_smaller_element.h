@@ -5,8 +5,6 @@
 
 using namespace std;
 
-
-
 // T~O(log(N)), S~O(1)
 inline int searchSmallerElement(const vector<int>& data, const int value) {
   if (data.empty()) { return -1; }
