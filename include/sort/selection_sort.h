@@ -12,7 +12,6 @@ inline void putMinToBegin(
   std::iter_swap(begin, min);
 }
 
-
 // Sort by finding smallest value and putting it at first position, then repeat
 // with right hand side.
 // T~O(N^2), S~O(1)
