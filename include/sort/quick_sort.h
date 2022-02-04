@@ -3,6 +3,8 @@
 
 #include <vector>
 
+using namespace std;
+
 inline vector<int>::iterator partition(
     const vector<int>::iterator begin, const vector<int>::iterator end) {
   const auto pivot = begin;
@@ -34,13 +36,11 @@ inline void quickSortRecursive(
 // Sort by recursively partitioning array into elements smaller and bigger than
 // pivot.
 // T~O(N*log(N)), S~O(log(N))
-inline vector<int> quickSort(const vector<int>& data) {
-  if (data.empty()) { return data; }
-  if (data.size() == 1) { return data; }
+inline void quickSort(vector<int>* data) {
+  if (data->empty()) { return; }
+  if (data->size() == 1) { return; }
 
-  vector<int> d = data;
-  quickSortRecursive(d.begin(), d.end());
-  return d;
+  quickSortRecursive(data->begin(), data->end());
 }
 
 #endif  // SORT_QUICK_SORT_H_

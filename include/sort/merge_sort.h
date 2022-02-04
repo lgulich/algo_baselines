@@ -54,10 +54,10 @@ inline void mergeSortRecursive(
   merge(begin, middle, end);
 }
 
-inline vector<int> mergeSort(const vector<int>& data) {
-  vector<int> d = data;
-  mergeSortRecursive(d.begin(), d.end());
-  return d;
+// Sort array by recursively splitting array in half and merge sorted halfs.
+// T~O(N*log(N)), S~O(N)
+inline void mergeSort(vector<int>* data) {
+  mergeSortRecursive(data->begin(), data->end());
 }
 
 #endif  // SORT_MERGE_SORT_H_
