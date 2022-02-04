@@ -73,18 +73,22 @@ your own implementations.
 
 ### Search
 
+* Binary Search<br>
+  T\~O(log(N)), S\~(1)<br>
+  Find position of an element in a sorted vector.
+
 * Pattern Matching - Knuth-Morris-Pratt Algorithm<br>
   T\~O(N+M), S\~(M)<br>
   Find if a pattern is contained in a vector. (N is size of vector, M is size of
   pattern).
 
-* Binary Search<br>
-  T\~O(log(N)), S\~(1)<br>
-  Find position of an element in a sorted vector.
-
-* Find Smaller Element<br>
+* Search Smaller Element<br>
   T\~O(log(N)), S\~(1)<br>
   Find element or next smaller element in a sorted vector.
+
+* Quick Select<br>
+  T\~O(N\*log(N)), S\~(1)<br>
+  Find k-smallest element in vector and partition around it.
 
 ### Sort
 

@@ -12,10 +12,14 @@ inline void putMinToBegin(
   std::iter_swap(begin, min);
 }
 
-inline vector<int> selectionSort(const vector<int>& data) {
-  vector<int> d = data;
-  for (int i = 0; i < d.size(); ++i) { putMinToBegin(d.begin() + i, d.end()); }
-  return d;
+
+// Sort by finding smallest value and putting it at first position, then repeat
+// with right hand side.
+// T~O(N^2), S~O(1)
+inline void selectionSort(vector<int>* data) {
+  for (int i = 0; i < data->size(); ++i) {
+    putMinToBegin(data->begin() + i, data->end());
+  }
 }
 
 #endif  // SORT_SELECTION_SORT_H_

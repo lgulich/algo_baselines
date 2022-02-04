@@ -19,6 +19,7 @@ enable_testing()
 ## Datastructures
 add_executable(data_structures_tests
   test/data_structures/sparse_table_test.cc
+  test/data_structures/queue_test.cc
   test/data_structures/main.cc
   )
 target_link_libraries(data_structures_tests gtest)
@@ -61,6 +62,7 @@ gtest_discover_tests(list_tests)
 add_executable(search_tests
   test/search/main.cc
   test/search/search_pattern_kmp_test.cc
+  test/search/quick_select_test.cc
   test/search/binary_search_test.cc
   test/search/search_smaller_value_test.cc
   )
