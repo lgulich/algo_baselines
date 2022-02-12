@@ -8,10 +8,16 @@ your own implementations.
 
 ## Data Structures
 
-* Sparse Table<br>
+* [Sparse Table](include/data_structures/sparse_table.h)<br>
   Data structure to allow fast range-queries (here for minimum values).<br>
   Creation: T\~O(N\*log(N)), S\~O(N\*log(N))<br>
   Query: T\~O(1), S\~O(1)
+* [Quick Union](include/data_structures/quick_union.h)<br>
+  Data structure that allows to connect nodes and efficiently query if two nodes
+  are connected.
+  Creation: T\~O(N), S\~O(N)<br>
+  Connect: T\~O(log(N)), S\~O(1)
+  Query: T\~O(log(N)), S\~O(1)
 
 ## Algorithms
 

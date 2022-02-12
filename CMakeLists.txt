@@ -21,6 +21,7 @@ add_executable(data_structures_tests
   test/data_structures/sparse_table_test.cc
   test/data_structures/queue_test.cc
   test/data_structures/main.cc
+  test/data_structures/quick_union_test.cc
   )
 target_link_libraries(data_structures_tests gtest)
 gtest_discover_tests(data_structures_tests)
@@ -61,9 +62,9 @@ gtest_discover_tests(list_tests)
 ## Search
 add_executable(search_tests
   test/search/main.cc
-  test/search/search_pattern_kmp_test.cc
-  test/search/quick_select_test.cc
   test/search/binary_search_test.cc
+  test/search/quick_select_test.cc
+  test/search/search_pattern_kmp_test.cc
   test/search/search_smaller_value_test.cc
   )
 target_link_libraries(search_tests gtest)
@@ -82,11 +83,11 @@ gtest_discover_tests(sort_tests)
 
 ## Trees
 add_executable(tree_tests
+  test/tree/main.cc
   test/tree/find_center_test.cc
   test/tree/hash_tree_test.cc
   test/tree/is_isomorphic_test.cc
   test/tree/lowest_common_ancestor_test.cc
-  test/tree/main.cc
   test/tree/root_tree_test.cc
   )
 target_link_libraries(tree_tests gtest)

@@ -12,6 +12,7 @@ class Queue {
 
     Node const* old_head = head_;
     head_ = head_->next;
+    if (!head_) { tail_ = nullptr; }
     delete old_head;
     --size_;
   }
