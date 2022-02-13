@@ -5,41 +5,41 @@
 
 class BinarySearchTree {
  public:
-   // T~(1)
+  // T~(1)
   int size() const {
     if (!root_) { return 0; }
     return root_->rank;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   int findLess(const int value) const {
     Node* node = findLessNode(value);
     if (!node) { throw "No node found."; }
     return node->value;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   int findGreater(const int value) const {
     Node* node = findGreaterNode(value);
     if (!node) { throw "No node found."; }
     return node->value;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   int findLessOrEqual(const int value) const {
     Node* node = findLessOrEqualNode(value);
     if (!node) { throw "No node found."; }
     return node->value;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   int findGreaterOrEqual(const int value) const {
     Node* node = findGreaterOrEqualNode(value);
     if (!node) { throw "No node found."; }
     return node->value;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   int countInRange(const int low, const int high) const {
     if (!root_) { return 0; }
 
@@ -52,7 +52,7 @@ class BinarySearchTree {
     return root_->rank - num_lower - num_higher;
   }
 
-   // T~(log(N)) if balanced
+  // T~(log(N)) if balanced
   void insert(const int value) {
     Node* new_node = new Node(value);
 
