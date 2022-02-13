@@ -18,9 +18,10 @@ enable_testing()
 
 ## Datastructures
 add_executable(data_structures_tests
+  test/data_structures/main.cc
+  test/data_structures/binary_search_tree_test.cc
   test/data_structures/sparse_table_test.cc
   test/data_structures/queue_test.cc
-  test/data_structures/main.cc
   test/data_structures/quick_union_test.cc
   )
 target_link_libraries(data_structures_tests gtest)
