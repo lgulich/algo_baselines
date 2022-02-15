@@ -27,7 +27,6 @@ your own implementations.
   Creation: T\~O(N\*log(N)), S\~O(N\*log(N))<br>
   Query: T\~O(1), S\~O(1)
 
-
 ## Algorithms
 
 ### Dynamic Programming
@@ -104,6 +103,10 @@ your own implementations.
 * [Quick Select](include/search/quick_select.h)<br>
   T\~O(N\*log(N)), S\~(1)<br>
   Find k-smallest element in vector and partition around it.
+
+* [Range Contains](include/search/range_contains.h)<br>
+  T\~O(log(N)), S\~(1)<br>
+  Check is a list of ranges contains a value.
 
 ### Sort
 
