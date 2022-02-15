@@ -27,7 +27,6 @@ your own implementations.
   Creation: T\~O(N\*log(N)), S\~O(N\*log(N))<br>
   Query: T\~O(1), S\~O(1)
 
-
 ## Algorithms
 
 ### Dynamic Programming
