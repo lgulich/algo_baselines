@@ -104,6 +104,10 @@ your own implementations.
   T\~O(N\*log(N)), S\~(1)<br>
   Find k-smallest element in vector and partition around it.
 
+* [Range Contains](include/search/range_contains.h)<br>
+  T\~O(log(N)), S\~(1)<br>
+  Check is a list of ranges contains a value.
+
 ### Sort
 
 * [Merge Sort](include/sort/merge_sort.h)<br>
