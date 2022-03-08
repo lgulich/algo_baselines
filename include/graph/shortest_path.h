@@ -34,12 +34,10 @@ inline vector<double> shortestPathBellford(
 
   // Second pass to find negative cycles.
   // T~O(N*E), S~(1)
-  for (int i = 0; i < graph.size() - 1; ++i) {
-    for (int src = 0; src < graph.size(); ++src) {
-      for (const auto& edge : graph[src]) {
-        if (costs[src] + edge.weight < costs[edge.dst]) {
-          costs[edge.dst] = -kInf;
-        }
+  for (int src = 0; src < graph.size(); ++src) {
+    for (const auto& edge : graph[src]) {
+      if (costs[src] + edge.weight < costs[edge.dst]) {
+        costs[edge.dst] = -kInf;
       }
     }
   }
